@@ -6,8 +6,10 @@ import json
 import azure.functions as func
 
 ANOMALY = -1
-model_file = "/home/site/wwwroot/model.sav"
-scaler_file = "/home/site/wwwroot/scaler.sav"
+current_dir = os.path.abspath(__file__)
+scriptdir = os.path.dirname(current_dir)
+model_file = os.path.join(scriptdir, "model.sav")
+scaler_file = os.path.join(scriptdir, "scaler.sav")
 
 #load model & scaler
 model = pickle.load(open(model_file, 'rb'))
