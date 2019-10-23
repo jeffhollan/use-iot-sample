@@ -1,0 +1,4 @@
+azure-functions
+scikit-learn
+scipy
+matplotlib
